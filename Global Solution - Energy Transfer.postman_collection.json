@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "e67b0b75-ec22-4199-b659-75fd827e5f6d",
+		"name": "Global Solution - Energy Transfer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34121595"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "createUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Usuario 1\",\r\n    \"cpf\": \"123.456.789-08\",\r\n    \"email\": \"usuario1@email.com\",\r\n    \"dataNascimento\": \"2000-01-25\",\r\n    \"rg\": \"12.345.678-9\",\r\n    \"telefone\": \"11 871219768\",\r\n    \"senha\": \"123\",\r\n    \"endereco\": {\r\n        \"logradouro\": \"Rua 2\",\r\n        \"bairro\": \"bairro\",\r\n        \"cep\": \"00000-000\",\r\n        \"cidade\": \"Rio de Janeiro\",\r\n        \"complemento\": \"Complemento\",\r\n        \"uf\": \"RJ\",\r\n        \"numero\": \"15\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"usuario1@email.com\",\r\n    \"senha\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuario/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"telefone\": \"11 24125667\",\r\n    \"nome\": \"Usuario Teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsuarioByCpf",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/123.456.789-08",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"123.456.789-08"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Anuncio",
+			"item": [
+				{
+					"name": "createAnuncio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"energia\": 0.13,\r\n    \"valor\": 30.34,\r\n    \"vendedorId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/anuncio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buyAnuncio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"anuncioId\": 1,\r\n    \"compradorId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/anuncio/comprar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio",
+								"comprar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAnuncio",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"energia\": 0.27,\r\n    \"valor\": 28.4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/anuncio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllAnuncios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/anuncio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAnuncioById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/anuncio/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"anuncio",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
