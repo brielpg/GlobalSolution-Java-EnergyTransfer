@@ -36,13 +36,7 @@ O projeto segue os padrões REST e é documentado com **Swagger**.
 - **Banco de Dados Oracle**
 - **Maven**
 
-## 2. Passos para rodar a aplicação:
-1.
-2.
-3.
-4.
-
-## 3. Relacionamentos:
+## 2. Relacionamentos:
 
 **1. Usuario com Endereço**  
 _**Relacionamento:**_ Many to One  
@@ -52,13 +46,13 @@ _**Descrição:**_ Cada usuário está associado a um endereço, mas um endereç
 _**Relacionamento:**_ Many to One  
 _**Descrição:**_ Um anúncio tem um vendedor (usuário) e, caso seja comprado, também está relacionado a um comprador (outro usuário).
 
-## 4. Vídeos
+## 3. Vídeos
 PITCH: https://youtu.be/hXPGfkWNVXA  
-Funcionamento da API: https://www.youtube.com/
+Funcionamento da API: https://youtu.be/CGQLfBjFlLY
 
-## 5. Endpoints Disponíveis
+## 4. Endpoints Disponíveis
 
-### 5.1. Endpoint de Usuários - /usuario
+### 4.1. Endpoint de Usuários - /usuario
 **POST** /usuario - cria um novo usuário  
 **POST** /usuario/login - login do usuário  
 **PUT**  /usuario - atualiza informacoes de um usuário  
@@ -66,7 +60,7 @@ Funcionamento da API: https://www.youtube.com/
 **GET**  /usuario/cpf - lista as informacoes de um usuário específico pelo seu cpf  
 **DEL**  /usuario/id - faz um delete lógico de um usuário através do id fornecido
 
-### 5.2. Endpoint de Anúncios - /anuncio
+### 4.2. Endpoint de Anúncios - /anuncio
 **POST** /anuncio - cria um novo anúncio  
 **POST** /anuncio/comprar - realiza a compra de um anúncio  
 **PUT** /anuncio - atualiza informacoes do anúncio pelo id  
